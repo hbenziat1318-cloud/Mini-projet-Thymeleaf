@@ -1,5 +1,5 @@
 # Mini-projet-Thymeleaf
-[DOSIER DU TP](https://drive.google.com/drive/u/0/home)
+[DOSIER DU TP-Mini Projet Thymeleaf](https://drive.google.com/drive/u/0/home)
 # DOCUMENTATION DU PROJET - GESTION IMMOBILIÈRE
 
 ## 1. Description du projet
@@ -89,8 +89,20 @@ gestion-immobilier/
 ```
 
 ---
+## 3. Diagramme d'architecture Spring Boot MVC
 
-## 3. Fonctionnalités principales
+<img width="2669" height="2943" alt="diagramme" src="https://github.com/user-attachments/assets/3454511c-a817-4955-a409-25414a2b7cd6" />
+
+</br>
+
+## 4.La Base de donnéés
+<img width="1058" height="708" alt="image" src="https://github.com/user-attachments/assets/20256bcc-a5ef-46a6-bb4e-eda8de02ced4" />
+<img width="1622" height="570" alt="image" src="https://github.com/user-attachments/assets/1f27d0a6-4378-42b3-bc68-50362a030205" />
+<img width="1918" height="858" alt="image" src="https://github.com/user-attachments/assets/79742c24-4945-427f-8df9-cc339a13e8e5" />
+<img width="1918" height="592" alt="image" src="https://github.com/user-attachments/assets/3b978a71-ac2f-428a-b173-4eb9a7fe04f1" />
+<img width="1913" height="495" alt="image" src="https://github.com/user-attachments/assets/15f6f9a7-b026-448e-8e28-1fdad0397503" />
+
+## 5. Fonctionnalités principales
 
 ### CRUD Complet
 - **Biens** : Ajouter, modifier, supprimer, consulter les propriétés
@@ -113,9 +125,9 @@ gestion-immobilier/
 
 ---
 
-## 4. Modèle de données
+## 6. Modèle de données
 
-### 4.1 Entités principales
+### 6.1 Entités principales
 
 #### Bien
 ```java
@@ -148,12 +160,12 @@ gestion-immobilier/
 - locataire: Locataire (@ManyToOne)
 ```
 
-### 4.2 Relations
+### 6.2 Relations
 - **Bail → Bien** : `@ManyToOne` (Un bail concerne un bien)
 - **Bail → Locataire** : `@ManyToOne` (Un bail concerne un locataire)
 - **Bien → Bail** : `@OneToMany` (Un bien peut avoir plusieurs baux dans le temps)
 
-### 4.3 Configuration base de données
+### 6.3 Configuration base de données
 ```properties
 # MySQL
 spring.datasource.url=jdbc:mysql://localhost:3306/gestion_immobilier
@@ -171,15 +183,15 @@ spring.jpa.hibernate.ddl-auto=update
 
 ---
 
-## 5. Lancer le projet
+## 7. Lancer le projet
 
-### 5.1 Prérequis
+### 7.1 Prérequis
 - **Java** : JDK 17 ou supérieur
 - **Maven** : 3.9+
 - **MySQL** : 8.0+ (optionnel)
 - **Navigateur web** moderne
 
-### 5.2 Installation
+### 7.2 Installation
 ```bash
 # Cloner le projet
 git clone https://github.com/votre-username/gestion-immobilier.git
@@ -195,7 +207,7 @@ mvn clean compile
 mvn spring-boot:run
 ```
 
-### 5.3 Accès à l'application
+### 7.3 Accès à l'application
 - **Application principale** : http://localhost:8080
 - **Tableau de bord** : http://localhost:8080/
 - **Gestion des biens** : http://localhost:8080/biens
@@ -204,7 +216,7 @@ mvn spring-boot:run
 
 ---
 
-## 6. Jeu de données initial
+## 8. Jeu de données initial
 
 ### Chargement automatique via `DataLoader.java`
 ```java
@@ -233,7 +245,7 @@ INSERT INTO baux (date_debut, date_fin, statut, depot_garantie, bien_id, locatai
 
 ---
 
-## 7. Démonstration Vidéo
+## 9. Démonstration Vidéo
 
 ### Lien vers la démonstration
 📹 **[(https://drive.google.com/drive/folders/11To6nvQhSndndzdvqRfC7aIOafdstVbF?usp=sharing)]** 
@@ -249,14 +261,14 @@ INSERT INTO baux (date_debut, date_fin, statut, depot_garantie, bien_id, locatai
 
 ---
 
-## 8. Auteurs /Encadrement
+## 10. Auteurs /Encadrement
 
 ### Étudiant
 - **Nom** : [BENZIAT Hana]
 - **Email** : h.benziat1318@uca.ac.ma
 - 
 ### Encadrement
-- **Module** : Développement d'Applications avec Spring Boot
+- **Module** : Technique De Programmation Avancées
 - **Encadré par:** Mr.lachgar
 - **Établissement** : Ens-Marrakech
 - **Année académique** : 2025-2026
